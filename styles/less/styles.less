@@ -1,0 +1,136 @@
+@import 'conf.less';
+@import 'flexslider.less';
+body{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    .font-normal();
+    color: @black;
+    text-decoration: none;
+}
+
+.inner-section{
+    max-width: 960px;
+    padding: 0 10px;
+}
+.main-slider{
+    background-image: url('../images/background-main.jpg');
+    background-position: 0%;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 720px;
+    display: flex;
+    align-items: center;
+    .inner-section{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        .logo{
+            flex: 0 0 100%;
+            position: relative;
+            height: 127px;
+            img{
+                position: absolute;
+                bottom: -25px;
+                left: 40px;
+                z-index: 5;
+            }
+        }
+        .info{
+            display: flex;
+            flex-wrap: wrap;
+            flex: 0 0 100%;
+            .moto{
+                max-width: 640px;
+                position: relative;
+                flex: 1 1 60%;
+                margin-right: 20px;
+                min-height: 295px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                align-content: center;
+                p{
+                    color: @white;
+                    position: relative;
+                    margin: 0 0 0 40px;
+                    flex: 0 0 100%;
+                    &.moto-big{
+                        font: @font-h1;
+                    }
+                    &.moto-small{
+                        .font-big-text();
+                        margin-top: 15px;
+                    }
+                }
+            }
+            .black-background{
+                &:before{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.9;
+                    background-color: @black;
+                    position: absolute;
+                }
+            }
+            .slider{
+                flex: 1 1 40%;
+                position: relative;
+                max-width: 290px;
+                min-height: 295px;
+                .flexslider{
+                    background: transparent;
+                }
+                .glide__arrows{
+                    button{
+                        height: 43px;
+                        width: 27px;
+                        position: absolute;
+                        transition: .3s ease-in-out;
+                        outline: none;
+                        cursor: pointer;
+                        opacity: 0;
+                        &.visible{
+                            opacity: 1;
+                        }
+                        &.prev{
+                            left: 0;
+                            border: none;
+                            transform: rotate(180deg) translateY(50%);
+                            background: url(../images/arrow.png) 50% no-repeat
+                        }
+                        &.next{
+                            transform: translateY(-50%);
+                            right: 0;
+                            border: none;
+                            background: url(../images/arrow.png) 50% no-repeat
+                        }
+                    }
+                }
+                
+            }
+
+            .button{
+                flex: 0 0 100%;
+                justify-content: flex-start;
+                a{
+                    display: block;
+                    width: 220px;
+                    height: 40px;
+                    border-radius: @button-border-radius;
+                    background-color: @white;
+                    cursor: pointer;
+                    text-align: center;
+                    text-decoration: none;
+                    color: @black;
+                    box-sizing: border-box;
+                    padding-top:13px;
+                    margin: 27px;
+                    .font-button-text(); 
+                }
+            }
+        }
+    }
+}
