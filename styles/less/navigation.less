@@ -1,0 +1,27 @@
+.header-section{
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.15);
+    nav{
+        max-width: 640px;
+        margin: 0 auto;
+        display: flex;
+        height: 64px;
+        align-items: center;
+        justify-content: space-around;
+        .nav-link{
+            display: flex;
+            height: 64px;
+            align-items: center;
+            border-top: 5px solid transparent;
+            box-sizing: border-box;
+            padding: 0 10px;
+            &.active{
+                border-top: 5px solid #00c6ff;
+            }
+            a{
+                color: @black;
+                text-decoration: none;
+                .font-button-text();
+            }
+        }
+    }
+}

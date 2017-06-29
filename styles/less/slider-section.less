@@ -1,0 +1,181 @@
+.main-slider{
+    background-image: url('../images/background-main.jpg');
+    background-position: 0%;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 720px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .inner-section{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        .logo{
+            flex: 0 0 100%;
+            position: relative;
+            height: 127px;
+            img{
+                position: absolute;
+                bottom: -25px;
+                left: 40px;
+                z-index: 5;
+            }
+        }
+        .info{
+            display: flex;
+            flex-wrap: wrap;
+            flex: 0 0 100%;
+            .moto{
+                max-width: 640px;
+                position: relative;
+                flex: 1 1 60%;
+                margin-right: 20px;
+                min-height: 295px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                align-content: center;
+                p{
+                    color: @white;
+                    position: relative;
+                    margin: 0 0 0 40px;
+                    flex: 0 0 100%;
+                    &.moto-big{
+                        font: @font-h1;
+                    }
+                    &.moto-small{
+                        .font-big-text();
+                        margin-top: 15px;
+                    }
+                }
+            }
+            .black-background{
+                &:before{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.9;
+                    background-color: @black;
+                    position: absolute;
+                }
+            }
+            .slider{
+                flex: 1 1 40%;
+                position: relative;
+                max-width: 290px;
+                min-height: 295px;
+                .flexslider{
+                    background: transparent;
+                    height: 80%;
+                    border: 0;
+                    margin: 0;
+                    .flex-viewport{
+                        height: 100%;
+                        ul{
+                            height: 100%;
+                            li{
+                                height:100%;
+                                .article{
+                                    height: 80%;
+                                    width: 70%;
+                                    margin: 0 auto;
+                                    transform: translateY(20%);
+                                    display: flex;
+                                    color: #fff;
+                                    justify-content: space-around;
+                                    align-items: flex-end;
+                                    flex-direction: column;
+                                    text-align: right;
+                                    p{
+                                        margin: 0;
+                                        &.article-body{
+                                            font: @font-h4;
+                                        }
+                                    }
+                                    a{
+                                        color: @white;
+                                        text-decoration: none;
+                                        border-bottom: 1px solid #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .flex-direction-nav{
+                    a{
+                        &:before{
+                            display: none;
+                        }
+                    }
+                    .flex-nav-prev a{
+                        border: none;
+                        transform: rotate(180deg) translateY(-100%);
+                        background: url(../images/arrow.png) 50% no-repeat;
+                        height: 20px;
+                        background-size: contain;
+                        color: rgba(0, 0, 0, 0);
+                        text-shadow: none;
+                        left: 0;
+                    }
+                    .flex-nav-next a{
+                        border: none;
+                        background: url(../images/arrow.png) 50% no-repeat;
+                        height: 20px;
+                        background-size: contain;
+                        color: rgba(0, 0, 0, 0);
+                        text-shadow: none;
+                        right: 0;
+                        transform: translateY(100%);
+                    }
+                }
+                .flex-control-paging{
+                    li{
+                        a{
+                            width: 8px;
+                            height: 8px;
+                            &.flex-active{
+                                width: 9px;
+                                height: 9px;
+                                background: @white;
+                            }
+                        }
+                    }
+                }
+                
+            }
+
+            .button{
+                flex: 0 0 100%;
+                justify-content: flex-start;
+                a{
+                    display: block;
+                    width: 220px;
+                    height: 40px;
+                    border-radius: @button-border-radius;
+                    background-color: @white;
+                    cursor: pointer;
+                    text-align: center;
+                    text-decoration: none;
+                    color: @black;
+                    box-sizing: border-box;
+                    padding-top:13px;
+                    margin: 27px;
+                    .font-button-text(); 
+                }
+            }
+        }
+    }
+    .anchor{
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        transform: rotate(90deg);
+        bottom: 15px;
+        background: url(../images/arrow.png) 50% no-repeat;
+        background-size: contain;
+        right: 50%;
+    }
+}
