@@ -1,9 +1,3 @@
-/** Third party*/
-//= ../../bower_components/jquery/dist/jquery.js
-
-/** Custom */
-//= parties/jquery.flexslider-min.js
-
 $(document).ready(function(){
     $('.flexslider').flexslider({
         animation: "slide"
@@ -19,5 +13,4 @@ $(document).ready(function(){
         });
         }
     });
-
 });
