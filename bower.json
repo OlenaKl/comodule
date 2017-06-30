@@ -1,0 +1,17 @@
+{
+  "name": "comodule",
+  "version": "1.0.0",
+  "authors": [
+    
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+    "dependencies": {
+    "normalize.css": "*",
+    "jquery": "3.*"
+  }
+}
