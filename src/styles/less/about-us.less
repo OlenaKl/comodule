@@ -1,0 +1,56 @@
+.about-us-section{
+    background: url(../images/about-us-lines.png) 50% no-repeat;
+    .inner-section{
+        padding: 60px 0;
+        .content{
+            display: flex;
+            justify-content: space-between;
+            .quotation{
+                font: @font-h3;
+                flex: 0 0 45%;
+                align-self: center;
+                position: relative;
+                padding: 0 40px;
+                box-sizing: border-box;
+            
+                &:before{
+                    position: absolute;
+                    top: -40px;
+                    left: 2px;
+                    content: "";
+                    height: 40px;
+                    width: 40px;
+                    background: url('../images/quotes.png') 50% no-repeat;
+                }
+                &:after{
+                    position: absolute;
+                    right: 0;
+                    bottom: -20px;
+                    content: "";
+                    height: 40px;
+                    width: 40px;
+                    transform: rotate(180deg);
+                    background: url('../images/quotes.png') 50% no-repeat;
+                }
+            }
+            .image{
+                flex: 0 0 40%;
+            }
+        }
+        .button{
+                margin-left: 120px;
+                display: block;
+                width: 220px;
+                height: 40px;
+                border-radius: 4px;
+                color: #fff;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                background: @black;
+                .font-button-text();
+                line-height: 40px;
+                box-shadow: 0px 0px 14px 0px rgba(23,23,22,1);
+            }
+    }
+}
