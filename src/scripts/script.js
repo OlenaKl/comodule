@@ -10,7 +10,9 @@
 
 $(document).ready(function(){
     $('.flexslider').flexslider({
-        animation: "slide"
+        animation: "slide",
+        prevText: "",
+        nextText: ""
     });
     $(".anchor").on('click', function(event) {
         if (this.hash !== "") {
