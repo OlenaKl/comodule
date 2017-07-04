@@ -68,7 +68,9 @@ gulp.task('style:build', function () {
     gulp.src(path.src.style) 
         .pipe(sourcemaps.init()) 
         .pipe(less()) 
-        .pipe(prefixer()) 
+        .pipe(prefixer({
+            browsers: ['last 2 versions', 'iOS >= 6']
+        })) 
         .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
