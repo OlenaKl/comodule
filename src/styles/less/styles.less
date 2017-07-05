@@ -12,6 +12,9 @@
 @import 'solutions.less';
 @import 'slick.less';
 @import 'footer.less';
+html{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 body{
     margin: 0;
     padding: 0;
@@ -19,6 +22,12 @@ body{
     .font-normal();
     color: @black;
     text-decoration: none;
+    overflow-x: hidden;
+}
+*{
+    @media @for-phone{
+        background-attachment: initial!important;
+    }
 }
 p{
     margin: 0;

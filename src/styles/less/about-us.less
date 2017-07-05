@@ -5,6 +5,9 @@
         .content{
             display: flex;
             justify-content: space-between;
+            @media @for-phone{
+                display: none;
+            }
             .quotation{
                 font: @font-h3;
                 flex: 0 0 45%;
@@ -35,10 +38,14 @@
             }
             .image{
                 flex: 0 0 40%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
         .button{
-                margin-left: 120px;
+                margin: 0 0 0 120px;
                 display: block;
                 width: 220px;
                 height: 40px;
@@ -51,6 +58,9 @@
                 .font-button-text();
                 line-height: 40px;
                 box-shadow: 0px 0px 14px 0px rgba(23,23,22,1);
+                @media @for-phone{
+                    margin: 15px auto;
+                }
             }
     }
 }

@@ -1,8 +1,9 @@
 .partners-section{
+    padding-top: 60px;
     p{
         font: @font-h4;
         text-align: center;
-        margin: 60px 0 30px;
+        margin-bottom: 30px;
     }
     ul{
         display: flex;
@@ -10,7 +11,17 @@
         flex-wrap: no-wrap;
         justify-content: space-around;
         list-style-type: none;
-        margin-bottom: 70px;
+        margin: 0 auto 70px;
         padding:0;
+        @media @for-phone{
+            flex-wrap: wrap;
+            margin: 0 auto 40px;
+        }
+        li{
+            @media @for-phone{
+                flex: 0 0 30%;
+            }
+            text-align: center;
+        }
     }
 }

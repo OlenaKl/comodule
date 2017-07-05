@@ -6,6 +6,12 @@
     height: auto;
     padding-top: 65px;
     box-sizing: border-box;
+    .content-scroll{
+        @media @for-phone{
+            width:100%;
+            overflow: hidden;
+        }
+    }
     .inner-section{
         
         .header{
@@ -24,9 +30,32 @@
         justify-content: space-around;
         padding:0;
         flex: 1 1 100%;
+        text-align: center;
+        list-style-type: none;
+        @media @for-phone{
+           display: block;
+            box-sizing: border-box;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            padding: 0;
+            width: 90%;
+            margin: 0 auto;
+            white-space: nowrap;
+            position: relative;
+            height: 180px;
+
+        }
         li{
             text-align: center;
             height: 180px;
+            
+            @media @for-phone{
+                display: inline-flex;
+                flex-direction: column;
+                margin: 0 10px;
+                width: 40%;
+                
+            }
             .content{
                 width: 82px;
                 height: 82px;
@@ -40,6 +69,12 @@
                 .font-normal();
                 color: @white;
                 max-width: 125px;
+                margin: 5px auto 0;
+                @media @for-phone{
+                   
+                    white-space: initial;
+                    
+                }
             }
         }
     }

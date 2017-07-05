@@ -49,9 +49,19 @@
     letter-spacing: 0.04px;
 }
 .font-button-text(){
-    font: 500 14px/14px @font-family;
+    font: 500 14px/20px @font-family;
     letter-spacing: 0.02px;
 }
+
+//font-spec mobile
+@font-h1-mobile: 600 30px/34px @font-family;
+@font-h3-mobile: 700 16px/24px @font-family;
+
+.font-button-text-mobile(){
+    font: 500 13px/20px @font-family;
+    letter-spacing: 0.02px;
+}
+
 //button spec
 @button-border-radius: 4px;
 //color spec
@@ -61,3 +71,8 @@
 @extralightgrey: #d9d9d9;
 @white: #ffffff;
 @green: #44d62c;
+
+//breakpoints
+
+@for-tablet-portrait: ~"screen and (max-width: 769px)";
+@for-phone: ~"screen and (max-width: 568px)";

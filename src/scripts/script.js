@@ -18,7 +18,6 @@ $(document).ready(function(){
     var bubbleslidesToShow = 3;
     var bubbleslidesToScroll = bubbleSlide%bubbleslidesToShow > 0 ? bubbleSlide%bubbleslidesToShow : bubbleslidesToShow; 
 
-    console.log(bubbleslidesToScroll);
     $('.flexslider').flexslider({
         animation: "slide",
         prevText: "",
@@ -93,4 +92,12 @@ $(document).ready(function(){
             ]
         });
     }
+
+    // $(window).bind('scroll', function () {
+    //     if ($(window).scrollTop() > $('.main-slider').height()) {
+    //         $('.header-section').addClass('fixed');
+    //     } else {
+    //         $('.header-section').removeClass('fixed');
+    //     }
+    // });
 });
