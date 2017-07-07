@@ -17,6 +17,67 @@ $(document).ready(function(){
     var bubbleSlide = $('.bubble-slider .content-bubble').length;
     var bubbleslidesToShow = 3;
     var bubbleslidesToScroll = bubbleSlide%bubbleslidesToShow > 0 ? bubbleSlide%bubbleslidesToShow : bubbleslidesToShow; 
+    toggleSlider();
+    function toggleSlider(){
+        if((clientsSlide > slidesToShow) && $(document).width() > 660){
+            $('.clients-solution').removeClass('clients-default').slick({
+                dots: false,
+                infinite: false,
+                speed: 600,
+                infinite: true,
+                slidesToShow: slidesToShow,
+                slidesToScroll: slidesToScroll,
+                prevArrow: '<div class="prev"></div>',
+                nextArrow: '<div class="next"></div>',
+                responsive: [
+                        {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                        },
+                        {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    }
+                ]
+            });
+        }
+
+        if((bubbleSlide > bubbleslidesToShow) && $(document).width() > 660){
+            $('.bubble-slider').removeClass('bubble-default').slick({
+                dots: false,
+                infinite: false,
+                speed: 600,
+                infinite: true,
+                slidesToShow: bubbleslidesToShow,
+                slidesToScroll: bubbleslidesToScroll,
+                adaptiveHeight: true,
+                prevArrow: '<div class="prev"></div>',
+                nextArrow: '<div class="next"></div>',
+                responsive: [
+                        {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                        },
+                        {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    }
+                ]
+            });
+        }
+    };
 
     $('.flexslider').flexslider({
         animation: "slide",
@@ -34,65 +95,15 @@ $(document).ready(function(){
         });
         }
     });
-    if(clientsSlide > slidesToShow){
-        $('.clients-solution').removeClass('clients-default').slick({
-            dots: false,
-            infinite: false,
-            speed: 600,
-            infinite: true,
-            slidesToShow: slidesToShow,
-            slidesToScroll: slidesToScroll,
-            prevArrow: '<div class="prev"></div>',
-            nextArrow: '<div class="next"></div>',
-            responsive: [
-                    {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 4
-                    }
-                    },
-                    {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }
-            ]
-        });
-    }
-
-    if(bubbleSlide > bubbleslidesToShow){
-        $('.bubble-slider').removeClass('bubble-default').slick({
-            dots: false,
-            infinite: false,
-            speed: 600,
-            infinite: true,
-            slidesToShow: bubbleslidesToShow,
-            slidesToScroll: bubbleslidesToScroll,
-            adaptiveHeight: true,
-            prevArrow: '<div class="prev"></div>',
-            nextArrow: '<div class="next"></div>',
-            responsive: [
-                    {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 4
-                    }
-                    },
-                    {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }
-            ]
-        });
-    }
-
+    
+    window.addEventListener('orientationchange', function(){
+        if ( $(document).width() < 660){
+           $('.clients-solution').slick('unslick').addClass('clients-default');
+        } else {
+             toggleSlider();
+        }
+    });
+    
     // $(window).bind('scroll', function () {
     //     if ($(window).scrollTop() > $('.main-slider').height()) {
     //         $('.header-section').addClass('fixed');
