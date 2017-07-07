@@ -1,5 +1,10 @@
 .partners-section{
-    padding-top: 60px;
+    padding: 60px 0;
+    background: url(../images/partners-lines.svg) 50% no-repeat;
+    background-size: cover;
+    @media screen and (min-width: 1200px){
+        background-size: 100%;
+    } 
     p{
         font: @font-h4;
         text-align: center;
@@ -11,7 +16,7 @@
         flex-wrap: no-wrap;
         justify-content: space-around;
         list-style-type: none;
-        margin: 0 auto 70px;
+        margin: 0 auto;
         padding:0;
         @media @for-phone{
             flex-wrap: wrap;
